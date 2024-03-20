@@ -95,20 +95,8 @@ namespace rock_paper_scissors
                     break;
             }
 
-            if(pChoice == cChoice)
-            {
-                winner = "Tie";
-            }
-            else if ((pChoice == 1 && cChoice == 3) || (pChoice == 2 && cChoice == 1) || (pChoice == 3 && cChoice == 2))
-            {
-                pScore++;
-                winner = "Player wins";
-            }
-            else
-            {
-                cScore++;
-                winner = "Computer wins";
-            }
+            cScore++;
+            winner = "Computer wins\n";
 
             tbxComputersChoice.Text = cChoiceStr;
             tbxResult.Text = "Computer choose " + cChoiceStr + ". Player choose " + pChoiceStr + ". " + winner + ".";
